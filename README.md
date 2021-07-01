@@ -1,7 +1,7 @@
 # backend-ecommerce-project
 ## A simple E-commerce using MERN stack
-You can use this repository to follow along with my MERN  project
-It covers several fundamentals such as 
+You can use this repository to follow along with my MERN project.  
+It covers several fundamentals such as :
 1. File uploads using Multer 
 2. Mongo DB
 3. MVC architecture,
