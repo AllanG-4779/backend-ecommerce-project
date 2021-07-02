@@ -3,14 +3,14 @@ const Verify = (req, res, next) => {
   const headers = req.headers.authorization;
   if (headers) {
     const token = headers.split(" ")[1];
-     jwt.verify(
+    const user = jwt.verify(
       token,
       process.env.JWT_SECRET_KEY,
       (err, success) => {
         if (err) {
           console.log(err);
           res.sendStatus(403);
-          next()
+          
         }
         if (success) {
           console.log(success);

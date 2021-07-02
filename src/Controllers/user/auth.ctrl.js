@@ -54,8 +54,8 @@ const signIn = (req, res) => {
   //param can either be email or password
   const logProcess = (user) => {
     if (user.authenticate(req.body.password) && user.role === "regular") {
-      const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET_KEY, {
-        expiresIn: "30s",
+      const token = jwt.sign({ _id: user._id ,role:user.role}, process.env.JWT_SECRET_KEY, {
+        expiresIn: "3600s",
       });
       const { _id, firstName, lastName, email, username, role } = user;
       res.status(202).json({
